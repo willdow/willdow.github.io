@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   // app
   app: {
-    baseURL: '/willdow.github.io/',
+    baseURL: "/willdow.github.io/",
     head: {
       __dangerouslyDisableSanitizers: ["script"],
       script: [
@@ -32,6 +32,16 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
     }
   },
+  site: {
+    title: "Willyan LIN",
+    description: "Blog personnel de Willyan LIN",
+    url: "https://willdow.github.io",
+    logo: "/logo.png"
+  },
+  modules: ["@nuxtjs/tailwindcss", "@nuxtjs/color-mode"],
+  colorMode: {
+    classSuffix: ""
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -40,5 +50,5 @@ export default defineNuxtConfig({
   },
   css: ["@/assets/css/main.css"],
   ssr: false,
-  target: 'static'
+  target: "static"
 });
