@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   // app
   app: {
+    baseURL: '/willdow.github.io/',
     head: {
       __dangerouslyDisableSanitizers: ["script"],
       script: [
@@ -37,5 +38,7 @@ export default defineNuxtConfig({
       autoprefixer: {}
     }
   },
-  css: ["@/assets/css/main.css"]
+  css: ["@/assets/css/main.css"],
+  ssr: false,
+  target: 'static'
 });
